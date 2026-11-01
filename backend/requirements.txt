@@ -1,0 +1,90 @@
+# Core
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+python-dotenv==1.0.1
+pydantic==2.9.0
+pydantic-settings==2.5.0
+
+# Database
+sqlalchemy[asyncio]==2.0.35
+asyncpg==0.29.0
+alembic==1.13.0
+psycopg2-binary==2.9.9
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
+
+# Task Queue
+celery[redis]==5.4.0
+redis==5.1.0
+
+# Storage
+boto3==1.35.0
+minio==7.2.0
+
+# WebSocket
+websockets==12.0
+
+# AI/Research - from GitHub repos
+langgraph==0.2.0
+langchain==0.3.0
+langchain-community==0.3.0
+langchain-openai==0.2.0
+llama-index==0.11.0
+knowledge-storm==0.2.0
+pyalex==0.14
+
+# PDF Processing - from GitHub repos
+docling==2.5.0
+grobid-client-python==0.0.7
+
+# Datasets - from GitHub repos
+datasets==3.0.0
+huggingface-hub==0.25.0
+dvc==3.55.0
+fiftyone==0.25.0
+cleanlab==2.7.0
+cleanvision==0.3.6
+
+# ML Training - from GitHub repos
+torch==2.4.0
+torchvision==0.19.0
+pytorch-lightning==2.4.0
+clearml==1.16.0
+mlflow==2.16.0
+optuna==4.0.0
+transformers==4.45.0
+autogluon==1.1.0
+
+# Evaluation - from GitHub repos
+scikit-learn==1.5.0
+matplotlib==3.9.0
+torchview==0.2.6
+
+# Diagrams
+graphviz==0.20.3
+
+# Writing - from GitHub repos
+language-tool-python==2.8
+
+# Citations - from GitHub repos
+# citation-js is npm, used in frontend
+
+# Originality - from GitHub repos
+sentence-transformers==3.1.0
+rapidfuzz==3.9.0
+datasketch==1.6.0
+
+# Utilities
+httpx==0.27.0
+aiofiles==24.1.0
+pillow==10.4.0
+numpy==1.26.4
+pandas==2.2.0
+rasterio==1.3.10
+albumentations==1.4.0
+pyyaml==6.0.2
+python-magic==0.4.27
+tqdm==4.66.0
