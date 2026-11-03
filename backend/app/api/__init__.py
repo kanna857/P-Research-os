@@ -15,6 +15,7 @@ from app.api.references import router as references_router
 from app.api.diagrams import router as diagrams_router
 from app.api.originality import router as originality_router
 from app.api.exports import router as exports_router
+from app.api.writing_pipeline import router as writing_pipeline_router
 
 api_router = APIRouter(prefix="/api")
 
@@ -28,4 +29,5 @@ api_router.include_router(manuscripts_router, prefix="/manuscripts", tags=["Manu
 api_router.include_router(references_router, prefix="/references", tags=["References & Citations"])
 api_router.include_router(diagrams_router, prefix="/diagrams", tags=["Scientific Diagrams"])
 api_router.include_router(originality_router, prefix="/originality", tags=["Originality & Similarity"])
+api_router.include_router(writing_pipeline_router, prefix="/writing-pipeline", tags=["Academic Writing & Originality Pipeline"])
 api_router.include_router(exports_router, prefix="/exports", tags=["Project Export"])

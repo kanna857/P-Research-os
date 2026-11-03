@@ -86,6 +86,7 @@ const NAV_GROUPS = [
     label: "PUBLICATION STUDIO",
     color: "text-fuchsia-400",
     items: [
+      { name: "Originality Studio", href: "/writing/originality-studio", icon: Sparkles, iconColor: "text-amber-400", activeBg: "bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600" },
       { name: "Academic Writing", href: "/writing", icon: PenTool, iconColor: "text-violet-400", activeBg: "bg-gradient-to-r from-violet-500 to-purple-600" },
       { name: "Reference Manager", href: "/references", icon: BookmarkCheck, iconColor: "text-blue-400", activeBg: "bg-gradient-to-r from-blue-500 to-sky-600" },
       { name: "Originality Check", href: "/originality", icon: ShieldCheck, iconColor: "text-green-400", activeBg: "bg-gradient-to-r from-green-500 to-emerald-600" },

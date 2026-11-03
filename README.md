@@ -216,7 +216,10 @@ flowchart TD
 | 🟢 | **Hyperparameter Search** | [`optuna/optuna`](https://github.com/optuna/optuna) | `🟠 Amber` | Bayesian Tree-structured Parzen Estimator (TPE) search with automatic pruning. |
 | 🟢 | **Scientific Evaluation** | [`scikit-learn/scikit-learn`](https://github.com/scikit-learn/scikit-learn) | `🟢 Teal` | Confusion matrices, ROC-AUC, classification reports, and segmentation metrics (IoU, Dice). |
 | 🟢 | **Diagram Architecture** | [`mermaid-js/mermaid`](https://github.com/mermaid-js/mermaid) & [`xyflow/xyflow`](https://github.com/xyflow/xyflow) | `🟣 Violet` | Vector flowcharts and React Flow visual neural architecture graphs with SVG/PDF export. |
-| 🟢 | **Academic Style Refinement**| [`harshaneel/humanize`](https://github.com/harshaneel/humanize) & [`languagetool`](https://github.com/languagetool-org/languagetool) | `🔴 Coral` | Grammar verification, formality scoring, and passive/active academic voice synthesis. |
+| 🟢 | **Academic Style Refinement**| [`ksanyok/TextHumanize`](https://github.com/ksanyok/TextHumanize) | `🔴 Coral` | Natural flow, sentence variety, and tone calibration while preserving numerical results and citations. |
+| 🟢 | **Academic Paraphraser** | [`PrithivirajDamodaran/Parrot_Paraphraser`](https://github.com/PrithivirajDamodaran/Parrot_Paraphraser) | `🟡 Gold` | Controlled sentence rewriting, adequacy/fluency ranking, with strict metric and equation retention guards. |
+| 🟢 | **Originality & Similarity** | [`NoplagLabs/noplag-engine`](https://github.com/NoplagLabs/noplag-engine) | `🟢 Mint` | N-gram shingling, near-duplicate passage detection, and downloadable originality reports. |
+| 🟢 | **Grammar & Academic Clarity**| [`languagetool-org/languagetool`](https://github.com/languagetool-org/languagetool) | `🔵 Sky` | Multi-category grammar and spelling auditing with specialized scientific terminology whitelisting. |
 | 🟢 | **Reference Management** | [`zotero/zotero`](https://github.com/zotero/zotero) & [`citation-js`](https://github.com/citation-js/citation-js) | `🔵 Cobalt` | IEEE numbered in-text citations `[1]`, BibTeX/RIS formatting, and Crossref DOI verification. |
 | 🟢 | **Originality & Attribution** | [`sentence-transformers`](https://github.com/UKPLab/sentence-transformers) & [`RapidFuzz`](https://github.com/rapidfuzz/RapidFuzz) | `🟢 Mint` | Semantic embedding distance and exact-match verification against literature libraries. |
 
@@ -246,6 +249,7 @@ flowchart TD
 | **16** | **Results & Evaluation** | `/results` | 🔵 Confusion matrix, ROC curves, IoU/Dice leaderboard, and reports |
 | **17** | **Scientific Diagrams** | `/diagrams` | 🟣 Live Mermaid architecture designer with vector SVG/PDF export |
 | **18** | **Academic Writing** | `/writing` | 🔴 LanguageTool grammar checks, tone adjustment, and LaTeX source editor |
+| **⭐** | **Originality & Writing Studio** | `/writing/originality-studio` | 🌟 Unified LanguageTool + TextHumanize + Parrot + Noplag autonomous manuscript review & DOCX/LaTeX export |
 | **19** | **Reference Manager** | `/references` | 🔵 IEEE numbered references `[1]`, Crossref DOI resolver, BibTeX/RIS |
 | **20** | **Originality Checker** | `/originality` | 🟢 Sentence-Transformers semantic scan for unattributed citations |
 | **21** | **Journal Submission** | `/journal` | 🟣 IEEE J-STARS two-column preview, compliance checklist, and pdflatex |
@@ -257,7 +261,46 @@ flowchart TD
 
 ---
 
-## 🚀 Quick Start (Windows Local Execution)
+## ✍️ 5. Academic Writing & Originality Studio (`/writing/originality-studio`)
+
+ResearchOS integrates four premier open-source NLP and academic writing frameworks into an autonomous review pipeline:
+
+```
+[ Research Topic ] ──> [ Verified Literature ] ──> [ Real Experimental Results ]
+                                    │
+                                    ▼
+                     [ Evidence-Grounded Manuscript ]
+                                    │
+      ┌─────────────────────────────┼─────────────────────────────┐
+      ▼                             ▼                             ▼
+[ LanguageTool ]            [ TextHumanize ]            [ Parrot Paraphraser ]
+Grammar & Scientific         Academic Style &             Controlled Rewriting &
+Terminology Whitelist         Flow Calibration            Metric Protection Guard
+      │                             │                             │
+      └─────────────────────────────┼─────────────────────────────┘
+                                    │
+                                    ▼
+                       [ Citation Verification ]
+                     Checks in-text [1] & Metrics
+                                    │
+                                    ▼
+                         [ Noplag Engine ]
+                  Shingling & Similarity Analysis
+                                    │
+                                    ▼
+             [ Autonomous Quality Scorecard & Manuscript Export ]
+                 DOCX (Word) • LaTeX (.tex) • Audit Report
+```
+
+### 🛠️ Integrated Open-Source Frameworks
+1. **[TextHumanize](https://github.com/ksanyok/TextHumanize)**: Natural sentence flow and readability adjustment across Formal (IEEE), Technical, Concise, and Natural registers. Guarantees retention of citations, mathematical formulas, and numerical results while blocking unsupported hyperbole.
+2. **[Parrot Paraphraser](https://github.com/PrithivirajDamodaran/Parrot_Paraphraser)**: Controlled sentence rewriting with Adequacy, Fluency, and Diversity scoring. Includes an **Entity & Metric Protection Guard** that flags any alteration of empirical numbers (e.g., `93.8%`, `0.841 mIoU`) or equations.
+3. **[Noplag Engine](https://github.com/NoplagLabs/noplag-engine)**: Token shingling and MinHash similarity analysis against indexed open-access papers and project literature. Provides matched passage offsets, DOI links, and downloadable originality reports. *(Disclaimer: Local similarity does not claim equivalence to Turnitin or iThenticate proprietary databases).*
+4. **[LanguageTool](https://github.com/languagetool-org/languagetool)**: Rule-based grammar, spelling, punctuation, and clarity auditing with a 40+ term domain whitelist protecting specialized scientific terms (`SAR`, `Sentinel-1`, `Siamese`, `mIoU`, `GeoTIFF`, `backscatter`).
+
+---
+
+## 🚀 6. Quick Start (Windows Local Execution)
 
 ### ⚙️ Prerequisites
 - **Node.js**: `v18.0.0+`
