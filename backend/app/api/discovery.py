@@ -150,3 +150,4 @@ async def get_discovery_stats():
         "completed_downloads": completed_downloads,
         "recent_discovery_runs": history,
     }
+

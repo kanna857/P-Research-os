@@ -96,3 +96,4 @@ class QueryExpander:
 
 
 query_expander = QueryExpander()
+

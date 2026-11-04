@@ -34,6 +34,15 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
+    # ── Nhost & Hasura GraphQL Configuration ──────────────────────────────────
+    HASURA_GRAPHQL_ENDPOINT: str = "http://localhost:8080/v1/graphql"
+    HASURA_GRAPHQL_ADMIN_SECRET: str = "nhost-admin-secret"
+    NHOST_SUBDOMAIN: str = "local"
+    NHOST_REGION: str = "local"
+    NHOST_AUTH_URL: str = "http://localhost:8080/v1/auth"
+    NHOST_STORAGE_ENDPOINT: str = "http://localhost:8080/v1/storage"
+    NHOST_JWT_SECRET: str = "change-me-in-production-nhost-jwt-secret-key-32chars"
+
     # ── LLM API Keys ─────────────────────────────────────────────────────────
     OPENAI_API_KEY: Optional[str] = None
     ANTHROPIC_API_KEY: Optional[str] = None

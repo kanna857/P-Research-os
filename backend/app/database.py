@@ -64,8 +64,18 @@ async def get_db() -> AsyncGenerator[AsyncSession, None]:
 async def init_db() -> None:
     """Create all registered tables."""
     import app.models  # ensure models are registered
+    global engine, async_session_maker
     try:
         async with engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
     except Exception as e:
-        print(f"[ResearchOS DB] Postgres connection deferred/failed ({e}), fallback initialized.")
+        print(f"[ResearchOS DB] Postgres connection deferred/failed ({e}), falling back to SQLite.")
+        db_url = "sqlite+aiosqlite:///./researchos.db"
+        engine = create_async_engine(
+            db_url,
+            echo=False,
+            connect_args={"check_same_thread": False},
+        )
+        async_session_maker.configure(bind=engine)
+        async with engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)

@@ -11,6 +11,26 @@ from app.models.dataset import Dataset, ProcessedDataset
 from app.models.model import MLModel, TrainingJob, Experiment
 from app.models.manuscript import Manuscript, Reference
 from app.models.diagram import Diagram
+from app.models.nhost_schema import (
+    UserProfile,
+    ResearchTopic,
+    PaperAuthor,
+    Citation,
+    DatasetVersion,
+    PaperDatasetLink,
+    ResearchJob,
+    ResearchAgent,
+    AgentExecutionLog,
+    ExperimentMetric,
+    TrainingCheckpoint,
+    GeneratedFigure,
+    ManuscriptVersion,
+    ResearchArtifact,
+    Notification,
+    AuditLog,
+    ApiProviderUsage,
+    PaperEmbedding,
+)
 
 __all__ = [
     "User",
@@ -24,4 +44,22 @@ __all__ = [
     "Manuscript",
     "Reference",
     "Diagram",
+    "UserProfile",
+    "ResearchTopic",
+    "PaperAuthor",
+    "Citation",
+    "DatasetVersion",
+    "PaperDatasetLink",
+    "ResearchJob",
+    "ResearchAgent",
+    "AgentExecutionLog",
+    "ExperimentMetric",
+    "TrainingCheckpoint",
+    "GeneratedFigure",
+    "ManuscriptVersion",
+    "ResearchArtifact",
+    "Notification",
+    "AuditLog",
+    "ApiProviderUsage",
+    "PaperEmbedding",
 ]

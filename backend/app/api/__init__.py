@@ -18,6 +18,7 @@ from app.api.exports import router as exports_router
 from app.api.writing_pipeline import router as writing_pipeline_router
 from app.api.crawling import router as crawling_router
 from app.api.discovery import router as discovery_router
+from app.api.nhost import router as nhost_router
 
 api_router = APIRouter(prefix="/api")
 
@@ -34,4 +35,5 @@ api_router.include_router(originality_router, prefix="/originality", tags=["Orig
 api_router.include_router(writing_pipeline_router, prefix="/writing-pipeline", tags=["Academic Writing & Originality Pipeline"])
 api_router.include_router(crawling_router, prefix="/crawling", tags=["Autonomous Research Crawling & Scraping"])
 api_router.include_router(discovery_router, prefix="/discovery", tags=["Free-First Research Discovery"])
+api_router.include_router(nhost_router, prefix="/nhost", tags=["Nhost + PostgreSQL & Hasura GraphQL"])
 api_router.include_router(exports_router, prefix="/exports", tags=["Project Export"])

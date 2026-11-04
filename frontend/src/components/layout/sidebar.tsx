@@ -102,6 +102,7 @@ const NAV_GROUPS = [
     label: "SYSTEM",
     color: "text-slate-400",
     items: [
+      { name: "Nhost & PostgreSQL", href: "/nhost", icon: Database, iconColor: "text-indigo-400", activeBg: "bg-gradient-to-r from-indigo-500 to-purple-600" },
       { name: "Settings & Integrations", href: "/settings", icon: Settings, iconColor: "text-slate-300", activeBg: "bg-gradient-to-r from-slate-600 to-gray-700" },
       { name: "About ResearchOS", href: "/about", icon: Info, iconColor: "text-cyan-400", activeBg: "bg-gradient-to-r from-cyan-500 to-blue-600" },
     ],
