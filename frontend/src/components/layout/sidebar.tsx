@@ -32,6 +32,7 @@ import {
   Sparkles,
   Info,
   Globe,
+  Compass,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -48,6 +49,7 @@ const NAV_GROUPS = [
     label: "RESEARCH INTELLIGENCE",
     color: "text-violet-400",
     items: [
+      { name: "Autonomous Discovery", href: "/discovery", icon: Compass, iconColor: "text-amber-400", activeBg: "bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600" },
       { name: "Paper Discovery", href: "/papers/discover", icon: Search, iconColor: "text-blue-400", activeBg: "bg-gradient-to-r from-blue-500 to-indigo-600" },
       { name: "Web Crawling Studio", href: "/crawling", icon: Globe, iconColor: "text-emerald-400", activeBg: "bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-600" },
       { name: "Research Library", href: "/library", icon: BookOpen, iconColor: "text-violet-400", activeBg: "bg-gradient-to-r from-violet-500 to-purple-600" },

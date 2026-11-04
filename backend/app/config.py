@@ -17,6 +17,7 @@ class Settings(BaseSettings):
         env_file=".env",
         env_file_encoding="utf-8",
         case_sensitive=True,
+        extra="ignore",
     )
 
     # ── Database ──────────────────────────────────────────────────────────────
@@ -69,6 +70,15 @@ class Settings(BaseSettings):
     S3_BUCKET_DATASETS: str = "researchos-datasets"
     S3_BUCKET_MODELS: str = "researchos-models"
     S3_BUCKET_EXPORTS: str = "researchos-exports"
+
+    # ── Free-First Policy & Academic Quota Controls ───────────────────────────
+    FREE_ONLY_MODE: bool = True
+    ENABLE_PAID_APIS: bool = False
+    AUTO_PURCHASE_CREDITS: bool = False
+    CORE_API_KEY: Optional[str] = None
+    NASA_EARTHDATA_TOKEN: Optional[str] = None
+    COPERNICUS_CLIENT_ID: Optional[str] = None
+    COPERNICUS_CLIENT_SECRET: Optional[str] = None
 
     # ── GROBID ────────────────────────────────────────────────────────────────
     GROBID_URL: str = "http://localhost:8070"
