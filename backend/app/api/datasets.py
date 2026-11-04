@@ -12,11 +12,13 @@ from app.models.dataset import Dataset, ProcessedDataset
 from app.schemas.dataset import DatasetCreate, DatasetResponse, ProcessingConfig, ProcessedDatasetResponse
 from app.integrations.datasets.hf_datasets_client import hf_datasets_client
 from app.integrations.datasets.fiftyone_inspector import fiftyone_inspector
+from app.integrations.datasets.fiftyone_adapter import FiftyOneSARVisualizer
 from app.integrations.preprocessing.split_manager import preprocessing_split_manager
 from app.integrations.preprocessing.dvc_tracker import dvc_tracker
 from app.utils.storage import storage_manager
 
 router = APIRouter()
+fiftyone_visualizer = FiftyOneSARVisualizer()
 
 
 @router.post("/search")
@@ -140,4 +142,22 @@ async def list_processed_datasets(dataset_id: int, db: AsyncSession = Depends(ge
     """Retrieve all processed versions and manifests for dataset."""
     result = await db.execute(select(ProcessedDataset).where(ProcessedDataset.dataset_id == dataset_id))
     return result.scalars().all()
+
+
+@router.get("/visual-inspection/sar")
+async def get_sar_visual_inspection(dataset_name: str = "Sentinel-1 SAR Change Detection"):
+    """
+    Returns FiftyOne visual inspection for multitemporal SAR pairs,
+    ground-truth change masks, prediction overlays, and cleanlab quality flags.
+    """
+    return fiftyone_visualizer.get_dataset_inspection_summary(dataset_name=dataset_name)
+
+
+@router.post("/visual-inspection/launch-session")
+async def launch_fiftyone_session(port: int = 5151):
+    """
+    Launch FiftyOne interactive exploration session or return headless URL.
+    """
+    return fiftyone_visualizer.launch_or_connect_session(port=port)
+
 

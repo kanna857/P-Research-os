@@ -71,3 +71,15 @@ async def root() -> dict:
 @app.get("/health", tags=["status"])
 async def health_check() -> dict:
     return {"status": "healthy", "service": "ResearchOS Backend"}
+
+
+@app.get("/metrics", tags=["monitoring"])
+async def root_prometheus_metrics():
+    """Prometheus-compatible metrics exposition endpoint."""
+    from fastapi import Response
+    from app.integrations.infrastructure.monitoring_service import SystemMonitoringService
+    monitor = SystemMonitoringService()
+    health = await monitor.check_full_health()
+    jobs = monitor.get_job_metrics()
+    metrics_text = monitor.generate_prometheus_metrics(health, jobs)
+    return Response(content=metrics_text, media_type="text/plain; version=0.0.4; charset=utf-8")

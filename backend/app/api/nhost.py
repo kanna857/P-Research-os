@@ -197,3 +197,4 @@ async def update_job_progress(job_id: str, body: Dict[str, Any]):
         "progress_pct": progress_pct,
         "status": status_str,
     }
+

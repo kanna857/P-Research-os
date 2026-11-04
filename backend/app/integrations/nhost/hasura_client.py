@@ -248,3 +248,4 @@ class HasuraGraphQLClient:
 
 
 hasura_client = HasuraGraphQLClient()
+

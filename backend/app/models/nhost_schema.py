@@ -348,3 +348,4 @@ class PaperEmbedding(Base):
     __table_args__ = (
         Index("idx_paper_embeddings_paper_chunk", "paper_id", "chunk_index"),
     )
+

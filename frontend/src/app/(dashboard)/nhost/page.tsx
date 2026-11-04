@@ -540,3 +540,4 @@ export default function NhostIntegrationPage() {
     </div>
   );
 }
+

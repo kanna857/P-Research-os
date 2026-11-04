@@ -106,3 +106,4 @@ class NhostStorageClient:
 
 
 nhost_storage_client = NhostStorageClient()
+

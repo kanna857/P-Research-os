@@ -426,3 +426,4 @@ BEGIN
         CREATE INDEX IF NOT EXISTS idx_paper_embeddings_lookup ON public.paper_embeddings(paper_id, chunk_index);
     END IF;
 END $$;
+

@@ -56,6 +56,7 @@ const NAV_GROUPS = [
       { name: "PDF Reader", href: "/papers/reader", icon: FileText, iconColor: "text-pink-400", activeBg: "bg-gradient-to-r from-pink-500 to-rose-600" },
       { name: "Literature Review", href: "/literature-review", icon: TableProperties, iconColor: "text-purple-400", activeBg: "bg-gradient-to-r from-purple-500 to-indigo-600" },
       { name: "Gap Analysis", href: "/research-gaps", icon: Target, iconColor: "text-rose-400", activeBg: "bg-gradient-to-r from-rose-500 to-red-600" },
+      { name: "Evidence Verification", href: "/evidence", icon: ShieldCheck, iconColor: "text-emerald-400", activeBg: "bg-gradient-to-r from-emerald-500 to-teal-600" },
     ],
   },
   {
@@ -93,6 +94,8 @@ const NAV_GROUPS = [
       { name: "Originality Studio", href: "/writing/originality-studio", icon: Sparkles, iconColor: "text-amber-400", activeBg: "bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600" },
       { name: "Academic Writing", href: "/writing", icon: PenTool, iconColor: "text-violet-400", activeBg: "bg-gradient-to-r from-violet-500 to-purple-600" },
       { name: "Reference Manager", href: "/references", icon: BookmarkCheck, iconColor: "text-blue-400", activeBg: "bg-gradient-to-r from-blue-500 to-sky-600" },
+      { name: "Research Integrity", href: "/integrity", icon: ShieldCheck, iconColor: "text-rose-400", activeBg: "bg-gradient-to-r from-rose-500 to-red-600" },
+      { name: "Reproducibility Engine", href: "/reproducibility", icon: Layers, iconColor: "text-cyan-400", activeBg: "bg-gradient-to-r from-cyan-500 to-blue-600" },
       { name: "Originality Check", href: "/originality", icon: ShieldCheck, iconColor: "text-green-400", activeBg: "bg-gradient-to-r from-green-500 to-emerald-600" },
       { name: "Journal Submission", href: "/journal", icon: Send, iconColor: "text-indigo-400", activeBg: "bg-gradient-to-r from-indigo-500 to-blue-600" },
       { name: "Project Export", href: "/export", icon: Download, iconColor: "text-orange-400", activeBg: "bg-gradient-to-r from-orange-500 to-red-600" },
@@ -102,6 +105,7 @@ const NAV_GROUPS = [
     label: "SYSTEM",
     color: "text-slate-400",
     items: [
+      { name: "System Monitoring", href: "/monitoring", icon: LineChart, iconColor: "text-teal-400", activeBg: "bg-gradient-to-r from-teal-500 to-emerald-600" },
       { name: "Nhost & PostgreSQL", href: "/nhost", icon: Database, iconColor: "text-indigo-400", activeBg: "bg-gradient-to-r from-indigo-500 to-purple-600" },
       { name: "Settings & Integrations", href: "/settings", icon: Settings, iconColor: "text-slate-300", activeBg: "bg-gradient-to-r from-slate-600 to-gray-700" },
       { name: "About ResearchOS", href: "/about", icon: Info, iconColor: "text-cyan-400", activeBg: "bg-gradient-to-r from-cyan-500 to-blue-600" },
