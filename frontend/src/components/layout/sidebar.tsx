@@ -33,6 +33,7 @@ import {
   Info,
   Globe,
   Compass,
+  ShieldAlert,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -41,6 +42,7 @@ const NAV_GROUPS = [
     label: "WORKSPACE",
     color: "text-sky-400",
     items: [
+      { name: "Universal Autopilot Ω", href: "/autopilot", icon: Sparkles, iconColor: "text-amber-400", activeBg: "bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600" },
       { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard, iconColor: "text-sky-400", activeBg: "bg-gradient-to-r from-sky-500 to-blue-600" },
       { name: "New Research Project", href: "/projects/new", icon: FolderPlus, iconColor: "text-emerald-400", activeBg: "bg-gradient-to-r from-emerald-500 to-teal-600" },
     ],
@@ -49,6 +51,7 @@ const NAV_GROUPS = [
     label: "RESEARCH INTELLIGENCE",
     color: "text-violet-400",
     items: [
+      { name: "Domain Explorer (36)", href: "/domains", icon: Compass, iconColor: "text-cyan-400", activeBg: "bg-gradient-to-r from-cyan-500 to-blue-600" },
       { name: "Autonomous Discovery", href: "/discovery", icon: Compass, iconColor: "text-amber-400", activeBg: "bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600" },
       { name: "Paper Discovery", href: "/papers/discover", icon: Search, iconColor: "text-blue-400", activeBg: "bg-gradient-to-r from-blue-500 to-indigo-600" },
       { name: "Web Crawling Studio", href: "/crawling", icon: Globe, iconColor: "text-emerald-400", activeBg: "bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-600" },
@@ -83,6 +86,8 @@ const NAV_GROUPS = [
     label: "SCIENTIFIC RESULTS",
     color: "text-emerald-400",
     items: [
+      { name: "Statistical Studio", href: "/statistics", icon: LineChart, iconColor: "text-emerald-400", activeBg: "bg-gradient-to-r from-emerald-500 to-teal-600" },
+      { name: "Simulation Studio", href: "/simulation", icon: Cpu, iconColor: "text-cyan-400", activeBg: "bg-gradient-to-r from-cyan-500 to-indigo-600" },
       { name: "Results & Viz", href: "/results", icon: LineChart, iconColor: "text-emerald-400", activeBg: "bg-gradient-to-r from-emerald-500 to-green-600" },
       { name: "Diagram Generator", href: "/diagrams", icon: Network, iconColor: "text-fuchsia-400", activeBg: "bg-gradient-to-r from-fuchsia-500 to-pink-600" },
     ],
@@ -91,6 +96,7 @@ const NAV_GROUPS = [
     label: "PUBLICATION STUDIO",
     color: "text-fuchsia-400",
     items: [
+      { name: "Ethics & Compliance", href: "/ethics", icon: ShieldAlert, iconColor: "text-rose-400", activeBg: "bg-gradient-to-r from-rose-500 to-red-600" },
       { name: "Originality Studio", href: "/writing/originality-studio", icon: Sparkles, iconColor: "text-amber-400", activeBg: "bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600" },
       { name: "Academic Writing", href: "/writing", icon: PenTool, iconColor: "text-violet-400", activeBg: "bg-gradient-to-r from-violet-500 to-purple-600" },
       { name: "Reference Manager", href: "/references", icon: BookmarkCheck, iconColor: "text-blue-400", activeBg: "bg-gradient-to-r from-blue-500 to-sky-600" },
