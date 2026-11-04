@@ -43,8 +43,17 @@ class Settings(BaseSettings):
     OPENALEX_EMAIL: Optional[str] = None
     UNPAYWALL_EMAIL: Optional[str] = None
 
-    # ── HuggingFace ───────────────────────────────────────────────────────────
+    # ── Datasets & Repositories (Kaggle & HuggingFace) ────────────────────────
     HUGGINGFACE_TOKEN: Optional[str] = None
+    KAGGLE_USERNAME: Optional[str] = None
+    KAGGLE_KEY: Optional[str] = None
+
+    # ── Web Crawling & Scraping ───────────────────────────────────────────────
+    CRAWLER_USER_AGENT: str = "ResearchOS-Academic-Crawler/1.0 (+https://github.com/kanna857/P-Research-os; polite academic indexer)"
+    CRAWLER_RATE_LIMIT_SECONDS: float = 1.0
+    CRAWLER_MAX_DEPTH: int = 2
+    CRAWLER_CONCURRENCY_PER_DOMAIN: int = 2
+    CRAWLER_CACHE_ENABLED: bool = True
 
     # ── Experiment Tracking ───────────────────────────────────────────────────
     CLEARML_API_KEY: Optional[str] = None

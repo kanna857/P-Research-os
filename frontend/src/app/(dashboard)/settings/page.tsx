@@ -24,10 +24,18 @@ export default function SettingsPage() {
   const [openalexEmail, setOpenalexEmail] = useState("researcher@university.edu");
   const [unpaywallEmail, setUnpaywallEmail] = useState("researcher@university.edu");
   const [hfToken, setHfToken] = useState("hf_••••••••••••••••••••••••");
+  const [kaggleUsername, setKaggleUsername] = useState("");
+  const [kaggleKey, setKaggleKey] = useState("");
   const [grobidUrl, setGrobidUrl] = useState("http://localhost:8070");
   const [mlflowUri, setMlflowUri] = useState("http://localhost:5000");
 
   const integrations = [
+    { name: "Scrapy (scrapy/scrapy)", category: "Large-Scale Academic Web Crawling", status: "Active / Integrated", icon: Sparkles },
+    { name: "Crawl4AI (unclecode/crawl4ai)", category: "AI-Ready Markdown & Methods Extraction", status: "Active / Integrated", icon: Sparkles },
+    { name: "Trafilatura (adbar/trafilatura)", category: "Article Text & Noise Removal", status: "Active / Integrated", icon: Sparkles },
+    { name: "TextHumanize (ksanyok/TextHumanize)", category: "Academic Style Refinement", status: "Active / Integrated", icon: Sparkles },
+    { name: "Parrot Paraphraser (PrithivirajDamodaran/Parrot_Paraphraser)", category: "Controlled Sentence Rewriting", status: "Active / Integrated", icon: Sparkles },
+    { name: "Noplag Engine (NoplagLabs/noplag-engine)", category: "Originality & Shingling Analysis", status: "Active / Integrated", icon: Sparkles },
     { name: "LangGraph (langchain-ai/langgraph)", category: "Multi-Agent Research", status: "Active / Integrated", icon: Sparkles },
     { name: "Stanford STORM (stanford-oval/storm)", category: "Outline & Perspective Synthesis", status: "Active / Integrated", icon: Sparkles },
     { name: "LlamaIndex (run-llama/llama_index)", category: "RAG & Literature Indexing", status: "Active / Integrated", icon: Sparkles },
@@ -36,6 +44,7 @@ export default function SettingsPage() {
     { name: "Docling (docling-project/docling)", category: "Scientific Document Parsing", status: "Active / Integrated", icon: Sparkles },
     { name: "GROBID (kermitt2/grobid)", category: "Bibliographic Header Extraction", status: "Active / Ready", icon: Sparkles },
     { name: "Hugging Face Datasets & Hub", category: "Dataset Discovery", status: "Active / Connected", icon: Sparkles },
+    { name: "Kaggle Datasets & API", category: "Global Dataset Discovery & Download", status: "Active / Configurable", icon: Sparkles },
     { name: "FiftyOne & Cleanlab (voxel51/fiftyone, cleanlab/cleanlab)", category: "Quality Auditing & Label Inspection", status: "Active / Integrated", icon: Sparkles },
     { name: "DVC (iterative/dvc)", category: "Reproducible Data Versioning", status: "Active / Integrated", icon: Sparkles },
     { name: "PyTorch Lightning (Lightning-AI/pytorch-lightning)", category: "Multi-Model Training Engine", status: "Active / Integrated", icon: Sparkles },
@@ -57,7 +66,7 @@ export default function SettingsPage() {
         <div className="flex items-center gap-2">
           <h2 className="text-2xl font-bold tracking-tight">Settings & Integrations</h2>
           <Badge className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20 text-xs">
-            16 / 16 Repositories Connected
+            {integrations.length} / {integrations.length} Repositories Connected
           </Badge>
         </div>
         <p className="text-xs text-muted-foreground">
@@ -68,7 +77,7 @@ export default function SettingsPage() {
       <Tabs defaultValue="integrations" className="space-y-4">
         <TabsList className="h-9">
           <TabsTrigger value="integrations" className="text-xs">
-            Repository Integrations (16)
+            Repository Integrations ({integrations.length})
           </TabsTrigger>
           <TabsTrigger value="apikeys" className="text-xs">
             API Keys & Endpoints
@@ -135,6 +144,48 @@ export default function SettingsPage() {
                     onChange={(e) => setHfToken(e.target.value)}
                     className="text-xs font-mono"
                   />
+                </div>
+
+                {/* Kaggle API Configuration */}
+                <div className="p-4 rounded-xl bg-gradient-to-r from-sky-950/30 to-blue-950/20 border border-sky-500/20 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="font-semibold text-xs text-sky-400 flex items-center gap-1.5">
+                      <Key className="h-3.5 w-3.5" /> Kaggle API Configuration (Global Datasets Collection)
+                    </span>
+                    <Badge variant="outline" className="text-[10px] text-sky-400 border-sky-500/30">
+                      kaggle.json or .env
+                    </Badge>
+                  </div>
+                  <p className="text-[11px] text-muted-foreground leading-relaxed">
+                    You can place your Kaggle key in three places:
+                    <br />
+                    1. <strong>Local File (Recommended):</strong> Put <code>kaggle.json</code> in <code>C:\Users\&lt;username&gt;\.kaggle\kaggle.json</code> (Windows) or <code>~/.kaggle/kaggle.json</code> (Linux/Mac).
+                    <br />
+                    2. <strong>Environment File:</strong> Add <code>KAGGLE_USERNAME=your_user</code> and <code>KAGGLE_KEY=your_key</code> in <code>.env</code>.
+                    <br />
+                    3. <strong>Direct Entry Below:</strong>
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                    <div className="space-y-1">
+                      <Label className="text-[11px]">Kaggle Username</Label>
+                      <Input
+                        placeholder="e.g. johndoe"
+                        value={kaggleUsername}
+                        onChange={(e) => setKaggleUsername(e.target.value)}
+                        className="text-xs h-8 font-mono"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <Label className="text-[11px]">Kaggle API Key</Label>
+                      <Input
+                        type="password"
+                        placeholder="e.g. 7a8b9c... (from kaggle.json)"
+                        value={kaggleKey}
+                        onChange={(e) => setKaggleKey(e.target.value)}
+                        className="text-xs h-8 font-mono"
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

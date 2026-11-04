@@ -42,8 +42,8 @@
    - [Primary Benchmark: Sentinel-1 SAR Change Detection](#-primary-benchmark-sentinel-1-sar-change-detection)
 2. [🌈 System Architecture](#-system-architecture)
 3. [🛡️ Scientific Rigor & Zero-Leakage Guarantee](#-scientific-rigor--zero-leakage-guarantee)
-4. [💎 Mandatory Open-Source Integrations (16 Repositories)](#-mandatory-open-source-integrations-16-repositories)
-5. [🎨 Complete 23 Professional Application Views](#-complete-23-professional-application-views)
+4. [💎 Mandatory Open-Source Integrations (23 Repositories)](#-mandatory-open-source-integrations-23-repositories)
+5. [🎨 Complete 24 Professional Application Views](#-complete-24-professional-application-views)
 6. [🚀 Quick Start (Windows Local Execution)](#-quick-start-windows-local-execution)
 7. [🐳 Full-Stack Docker Compose Deployment](#-full-stack-docker-compose-deployment)
 8. [🧪 Empirical Verification & Automated Testing](#-empirical-verification--automated-testing)
@@ -196,10 +196,13 @@ flowchart TD
 
 ---
 
-## 💎 Mandatory Open-Source Integrations (16 Repositories)
+## 💎 Mandatory Open-Source Integrations (23 Repositories)
 
 | Status | Domain | Repository | Color Role | System Capability |
 | :---: | :--- | :--- | :---: | :--- |
+| 🟢 | **Large-Scale Web Crawling** | [`scrapy/scrapy`](https://github.com/scrapy/scrapy) | `🟢 Emerald` | URL frontier queue, robots.txt compliance, per-domain rate limiting, and academic link extraction. |
+| 🟢 | **AI-Ready Web Crawling** | [`unclecode/crawl4ai`](https://github.com/unclecode/crawl4ai) | `🔵 Cyan` | LLM-ready Markdown synthesis, structured methods, limitations, and dataset tags extraction. |
+| 🟢 | **Article Content Extraction**| [`adbar/trafilatura`](https://github.com/adbar/trafilatura) | `🟣 Violet` | High-precision main article text extraction, noise/navigation stripping, and metadata parsing. |
 | 🟢 | **Multi-Agent Orchestration** | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | `🟣 Violet` | Multi-agent state machines orchestrating hypothesis formulation, review cycles, and methodology gaps. |
 | 🟢 | **Perspective Outlines** | [`stanford-oval/storm`](https://github.com/stanford-oval/storm) | `🔵 Blue` | Perspective-driven research questions and structured manuscript section generator. |
 | 🟢 | **Literature Grounding** | [`run-llama/llama_index`](https://github.com/run-llama/llama_index) | `🟠 Orange` | Vector embeddings, passage indexing, and provenance-grounded literature comparison matrices. |
@@ -225,7 +228,7 @@ flowchart TD
 
 ---
 
-## 🎨 Complete 23 Professional Application Views
+## 🎨 Complete 24 Professional Application Views
 
 <div align="center">
 
@@ -234,11 +237,12 @@ flowchart TD
 | **01** | **Research Dashboard** | `/dashboard` | 🔵 Pipeline execution KPI cards, live telemetry graphs, and empirical leaderboard |
 | **02** | **New Research Project** | `/projects/new` | 🟣 Topic scoping, research question formulation, and target journal selection |
 | **03** | **Paper Discovery** | `/papers/discover` | 🟢 OpenAlex search engine, Unpaywall open-access badges, and citation counts |
+| **⭐** | **Web Crawling Studio** | `/crawling` | 🌟 Scrapy + Crawl4AI + Trafilatura autonomous academic web crawler & evidence engine |
 | **04** | **Research Library** | `/library` | 🟡 Full-text catalog with Docling/GROBID parsing status and DOI metadata |
 | **05** | **PDF Deep Reader** | `/papers/reader` | 🔴 Split-pane reader with LaTeX formulas and claim-to-passage extraction |
 | **06** | **Literature Review** | `/literature-review` | 🟣 Comparative matrix analyzing models, datasets, metrics, and weaknesses |
 | **07** | **Gap & Novelty Analysis**| `/research-gaps` | 🟠 LangGraph & STORM multi-agent gap discovery and testable hypotheses |
-| **08** | **Dataset Discovery** | `/datasets/discover` | 🔵 Hugging Face Hub, Zenodo, and Copernicus remote sensing data browser |
+| **08** | **Dataset Discovery** | `/datasets/discover` | 🔵 Hugging Face Hub, Zenodo, Kaggle, and Copernicus remote sensing data browser |
 | **09** | **Dataset Processing** | `/datasets/processing` | 🟢 Strict 80/20 non-leaking partitioner, DVC manifest, and augmentations |
 | **10** | **Dataset Explorer** | `/datasets/explorer` | 🟣 FiftyOne visual inspector, Cleanlab label audits, and SAR image pairs |
 | **11** | **Model Library** | `/models/library` | 🔴 Siamese U-Net, Swin Transformer, ResNet-50, U-Net, and MobileNetV3 |
@@ -254,7 +258,7 @@ flowchart TD
 | **20** | **Originality Checker** | `/originality` | 🟢 Sentence-Transformers semantic scan for unattributed citations |
 | **21** | **Journal Submission** | `/journal` | 🟣 IEEE J-STARS two-column preview, compliance checklist, and pdflatex |
 | **22** | **Project Export Center** | `/export` | 🟠 Complete reproducibility `.ZIP` package with DVC data hashes & code |
-| **23** | **Settings & Integrations**| `/settings` | 🔵 Health status monitor for all 16 open-source tool integrations |
+| **23** | **Settings & Integrations**| `/settings` | 🔵 Health status monitor & Kaggle / HF / Academic API key manager |
 | **⭐** | **About ResearchOS** | `/about` | 🌟 Comprehensive platform mission, architectural pillars, and repository guide |
 
 </div>

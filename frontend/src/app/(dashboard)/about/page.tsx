@@ -38,7 +38,7 @@ export default function AboutPage() {
     { label: "Scholarly Works Queried", value: "250M+", color: "text-sky-400", sub: "OpenAlex & Unpaywall" },
     { label: "Data Leakage Guarantee", value: "0.0%", color: "text-emerald-400", sub: "Strict 80/20 Spatial Split" },
     { label: "Top Model F1-Score", value: "93.8%", color: "text-purple-400", sub: "Siamese U-Net on Sentinel-1" },
-    { label: "Connected Frameworks", value: "16", color: "text-amber-400", sub: "Full Open-Source Suite" },
+    { label: "Connected Frameworks", value: "23", color: "text-amber-400", sub: "Full Open-Source Suite" },
   ];
 
   const pillars = [
@@ -112,6 +112,12 @@ export default function AboutPage() {
     { name: "ClearML & MLflow", category: "models", repo: "clearml/clearml", purpose: "Real-time telemetry & model registry", tag: "Telemetry" },
     { name: "Optuna", category: "models", repo: "optuna/optuna", purpose: "Bayesian hyperparameter optimization", tag: "AutoML" },
     { name: "Scikit-Learn", category: "models", repo: "scikit-learn/scikit-learn", purpose: "ROC curves, confusion matrix, mIoU & Dice metrics", tag: "Metrics" },
+    { name: "Scrapy", category: "discovery", repo: "scrapy/scrapy", purpose: "Large-scale academic web crawling & link graph frontier", tag: "Crawler" },
+    { name: "Crawl4AI", category: "discovery", repo: "unclecode/crawl4ai", purpose: "AI-ready Markdown & structured academic evidence", tag: "AI Crawl" },
+    { name: "Trafilatura", category: "discovery", repo: "adbar/trafilatura", purpose: "Main article text extraction & noise removal", tag: "Extract" },
+    { name: "TextHumanize", category: "manuscript", repo: "ksanyok/TextHumanize", purpose: "Academic style refinement & readability calibration", tag: "Style" },
+    { name: "Parrot Paraphraser", category: "manuscript", repo: "PrithivirajDamodaran/Parrot_Paraphraser", purpose: "Controlled sentence rewriting & diversity", tag: "Paraphrase" },
+    { name: "Noplag Engine", category: "manuscript", repo: "NoplagLabs/noplag-engine", purpose: "Originality auditing & n-gram shingling similarity", tag: "Originality" },
     { name: "LanguageTool", category: "manuscript", repo: "languagetool-org/languagetool", purpose: "Academic grammar verification & tone polishing", tag: "Writing" },
   ];
 

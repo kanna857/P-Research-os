@@ -39,6 +39,7 @@ pyalex==0.14
 # PDF Processing - from GitHub repos
 docling==2.5.0
 grobid-client-python==0.0.7
+pypdf==6.21.4
 
 # Datasets - from GitHub repos
 datasets==3.0.0

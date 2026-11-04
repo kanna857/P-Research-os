@@ -31,6 +31,7 @@ import {
   ChevronRight,
   Sparkles,
   Info,
+  Globe,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -48,6 +49,7 @@ const NAV_GROUPS = [
     color: "text-violet-400",
     items: [
       { name: "Paper Discovery", href: "/papers/discover", icon: Search, iconColor: "text-blue-400", activeBg: "bg-gradient-to-r from-blue-500 to-indigo-600" },
+      { name: "Web Crawling Studio", href: "/crawling", icon: Globe, iconColor: "text-emerald-400", activeBg: "bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-600" },
       { name: "Research Library", href: "/library", icon: BookOpen, iconColor: "text-violet-400", activeBg: "bg-gradient-to-r from-violet-500 to-purple-600" },
       { name: "PDF Reader", href: "/papers/reader", icon: FileText, iconColor: "text-pink-400", activeBg: "bg-gradient-to-r from-pink-500 to-rose-600" },
       { name: "Literature Review", href: "/literature-review", icon: TableProperties, iconColor: "text-purple-400", activeBg: "bg-gradient-to-r from-purple-500 to-indigo-600" },
